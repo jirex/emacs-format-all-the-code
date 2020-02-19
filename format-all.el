@@ -605,11 +605,8 @@ Consult the existing formatters for examples of BODY."
   (:executable "prettier")
   (:install "npm install --global prettier @prettier/plugin-lua @prettier/plugin-php prettier-plugin-solidity")
   (:languages
-   "CSS" "GraphQL" "JavaScript" "JSON" "JSX" "Less" "Lua" "Markdown" "PHP"
-   "SCSS" "Solidity" "TSX" "TypeScript" "Vue" "YAML"
-   ;; TODO: Use html-tidy instead of prettier for plain HTML. Enable
-   ;; prettier's HTML support once we have multi-formatter support.
-   ;; "HTML"
+   "CSS" "GraphQL" "HTML" "JavaScript" "JSON" "JSX" "Less" "Lua" "Markdown"
+   "PHP" "SCSS" "Solidity" "TSX" "TypeScript" "Vue" "YAML"
    "_Angular" "_Flow")
   (:format
    (format-all--buffer-easy
