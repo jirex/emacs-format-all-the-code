@@ -49,7 +49,7 @@
 ;; - Kotlin (ktlint)
 ;; - LaTeX (latexindent)
 ;; - Ledger (ledger-mode)
-;; - Lua (lua-fmt)
+;; - Lua (lua-fmt, prettier plugin-lua)
 ;; - Markdown (prettier)
 ;; - Nix (nixfmt)
 ;; - OCaml (ocp-indent)
@@ -603,9 +603,9 @@ Consult the existing formatters for examples of BODY."
 
 (define-format-all-formatter prettier
   (:executable "prettier")
-  (:install "npm install --global prettier @prettier/plugin-php prettier-plugin-solidity")
+  (:install "npm install --global prettier @prettier/plugin-lua @prettier/plugin-php prettier-plugin-solidity")
   (:languages
-   "CSS" "GraphQL" "JavaScript" "JSON" "JSX" "Less" "Markdown" "PHP"
+   "CSS" "GraphQL" "JavaScript" "JSON" "JSX" "Less" "Lua" "Markdown" "PHP"
    "SCSS" "Solidity" "TSX" "TypeScript" "Vue" "YAML"
    ;; TODO: Use html-tidy instead of prettier for plain HTML. Enable
    ;; prettier's HTML support once we have multi-formatter support.
