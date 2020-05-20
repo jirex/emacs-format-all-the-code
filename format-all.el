@@ -494,20 +494,20 @@ Consult the existing formatters for examples of BODY."
   (:languages "Go")
   (:format (format-all--buffer-easy executable)))
 
-(define-format-all-formatter html-tidy
-  (:executable "tidy")
-  (:install
-   (macos "brew install tidy-html5")
-   (windows "scoop install tidy"))
-  (:languages "HTML" "XML")
-  (:format
-   (format-all--buffer-hard
-    '(0 1) nil nil
-    executable
-    "-q"
-    "--tidy-mark" "no"
-    "-indent"
-    (when (equal language "XML") "-xml"))))
+;; (define-format-all-formatter html-tidy
+;;   (:executable "tidy")
+;;   (:install
+;;    (macos "brew install tidy-html5")
+;;    (windows "scoop install tidy"))
+;;   (:languages "HTML" "XML")
+;;   (:format
+;;    (format-all--buffer-hard
+;;     '(0 1) nil nil
+;;     executable
+;;     "-q"
+;;     "--tidy-mark" "no"
+;;     "-indent"
+;;     (when (equal language "XML") "-xml"))))
 
 (define-format-all-formatter istyle-verilog
   (:executable "iStyle")
@@ -587,7 +587,7 @@ Consult the existing formatters for examples of BODY."
    "SCSS" "Solidity" "TOML" "TSX" "TypeScript" "Vue" "YAML"
    ;; TODO: Use html-tidy instead of prettier for plain HTML. Enable
    ;; prettier's HTML support once we have multi-formatter support.
-   ;; "HTML"
+   "HTML"
    "_Angular" "_Flow")
   (:format
    (format-all--buffer-easy
